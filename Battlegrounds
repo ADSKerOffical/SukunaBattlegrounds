@@ -272,6 +272,80 @@ end
    end    
 })
 
+local Section = Tab:AddSection({
+ Name = "Sukuna(OP)"
+})
+
+Tab:AddButton({
+ Name = "Powerful True Cleave",
+ Callback = function()
+       for i = 1, 6 do
+game:GetService("ReplicatedStorage").Remotes7.Characters.Sukuna.Cleave.CleaveEvent:FireServer()
+      end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful True Dismantle",
+ Callback = function()
+       for i = 1, 7 do
+game:GetService("ReplicatedStorage").Remotes7.Characters.Sukuna.Dismantle.DismanleEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Activate Arrow",
+ Callback = function()
+        game:GetService("ReplicatedStorage").FlameArrowAssets.Assets.Remtoes.Fire:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Morph Shrine",
+ Callback = function()
+        local ohString1 = "Shrine"
+
+game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Black Explode",
+ Callback = function()
+        local ohString1 = "DomainStart"
+
+game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Domain SFX",
+ Callback = function()
+        local ohString1 = "DomainSFX"
+
+game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Domain VFX",
+ Callback = function()
+        local ohString1 = "DomainVFX"
+
+game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Hell on Earth",
+ Callback = function()
+        local ohString1 = "HellOnEarth3"
+
+game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1)
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
@@ -281,7 +355,7 @@ local Tab = Window:MakeTab({
 Tab:AddDropdown({
 	Name = "Input Vip Characters",
 	Default = "1",
-	Options = {"KJ", "Jogo", "Shinjuku Gojo", "Kashimo", "Dagon", "Yuki", "Atomic", "Megumin", "Judgeman"},
+	Options = {"KJ", "Jogo", "Shinjuku Gojo", "Kashimo", "Dagon", "Yuki", "Atomic", "Megumin", "Judgeman", "Serious Saitama", "Young Gojo", "Awakened Sukuna"},
 	Callback = function(Value)
 		if Value == "KJ" then
 		local ohString1 = "Character"
@@ -342,6 +416,27 @@ game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, 
 if Value == "Judgeman" then
 local ohString1 = "Character"
 local ohString2 = "Judgeman"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+end
+if Value == "Serious Saitama" then
+local ohString1 = "Character"
+local ohString2 = "Serious Saitama"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+end
+if Value == "Young Gojo" then
+local ohString1 = "Character"
+local ohString2 = "Young Gojo"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+end
+if Value == "Awakened Sukuna" then
+local ohString1 = "Character"
+local ohString2 = "Sukuna"
 local ohString3 = "Select"
 
 game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
