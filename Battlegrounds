@@ -178,6 +178,100 @@ end
    end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Jogo"
+})
+
+Tab:AddButton({
+ Name = "Infinity Strike",
+ Callback = function()
+        local ohCFrame1 = CFrame.new(160.584854, 27.395155, -108.068542, -0.276732266, -0.547994375, 0.789380372, 1.10285747e-09, 0.821460843, 0.570264876, -0.960947096, 0.157810688, -0.227324709)
+local ohNumber2 = 1e99
+
+game:GetService("Players").LocalPlayer.Backpack["Ember Insects"]["Ember Insects"].RemoteEvent:FireServer(ohCFrame1, ohNumber2)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Bad weather",
+ Callback = function()
+        wait(1)
+for i = 1, 10 do
+wait(0.2)
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local targetPosition = mouse.Hit.Position
+local ohCFrame1 = CFrame.new(targetPosition)
+
+game:GetService("Players").LocalPlayer.Backpack["Pyroburst Rain"]["Pyroburst Rain"].Event:FireServer(ohCFrame1)
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Internal Crash",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Infernal Crash"]["Infernal Crash"].RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Cataclysm",
+ Callback = function()
+        local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+    if player.Character then
+for i = 1, 5 do
+local ohCFrame1 = player.Character.HumanoidRootPart.CFrame
+
+game:GetService("Players").LocalPlayer.Backpack["Pyroburst Rain"]["Pyroburst Rain"].Event:FireServer(ohCFrame1)
+end
+  end
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Activate Domain",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Coffin of the Iron Mountain"].ActiveRemote:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Kashimo"
+})
+
+Tab:AddButton({
+ Name = "Powerful Negative Charge",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Negative Charge"]["Negative Charge"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Super Punches",
+ Callback = function()
+        for i = 1, 50 do
+game:GetService("Players").LocalPlayer.Backpack["Galvanic Harvest"]["Galvanic Harvest"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Postive Charge",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Positive Charge"]["Positive Charge"].RemoteEvent:FireServer()
+end
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
@@ -187,7 +281,7 @@ local Tab = Window:MakeTab({
 Tab:AddDropdown({
 	Name = "Input Vip Characters",
 	Default = "1",
-	Options = {"KJ", "Jogo", "Shinjuku Gojo", "Kashimo", "Dagon", "Yuki", "Atomic", "Megumin"},
+	Options = {"KJ", "Jogo", "Shinjuku Gojo", "Kashimo", "Dagon", "Yuki", "Atomic", "Megumin", "Judgeman"},
 	Callback = function(Value)
 		if Value == "KJ" then
 		local ohString1 = "Character"
@@ -245,6 +339,13 @@ local ohString3 = "Select"
 
 game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
 		end
+if Value == "Judgeman" then
+local ohString1 = "Character"
+local ohString2 = "Judgeman"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+end
 	end    
 })
 
