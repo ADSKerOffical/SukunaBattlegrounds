@@ -573,7 +573,7 @@ end
 Tab:AddDropdown({
 	Name = "Another Abilities",
 	Default = "1",
-	Options = {"Serious Flip", "Domain Slashes"},
+	Options = {"Serious Flip", "Domain Slashes", "Purple", "Final Hollow Purple", "Series"},
 	Callback = function(Value)
 		if Value == "Serious Flip" then
 		game:GetService("ReplicatedStorage").Events3.SeriousFlip:FireServer()
@@ -581,13 +581,23 @@ Tab:AddDropdown({
 		if Value == "Domain Slashes" then
 		game:GetService("ReplicatedStorage").NewTojiReworkAssets.Remotes.DomainSlashes:FireServer()
 		end
+if Value == "Purple" then
+game:GetService("ReplicatedStorage").NewYoungGojoHollowPurpleAssets.Remotes.Purple:FireServer()
+end
+                if Value == "Final Hollow Purple" then
+local ohString1 = "FinalHollowPurple"
+
+game:GetService("ReplicatedStorage")["Final Hollow Purple Assets"].Events.Abilitys.Gojo:FireServer(ohString1)
+end
+if Value == "Series" then
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Series:FireServer()
+end
 	end    
 })
 
 Tab:AddButton({
  Name = "UTG (Ultimate Trolling Gui)",
  Callback = function()
- local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
  OrionLib:MakeNotification({
 	Name = "Budgie Hub",
 	Content = "For this script to work you need to have a character *Megumi*",
