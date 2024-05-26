@@ -1,0 +1,389 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+
+local Window = OrionLib:MakeWindow({Name = "Budgie Hub | Sukuma Battlegrounds", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Abilities",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Gojo (This is all ReplicatedStorage)"
+})
+
+Tab:AddButton({
+ Name = "Powerful Red",
+ Callback = function()
+   for i = 1, 10 do
+        game:GetService("ReplicatedStorage")["Reworked Gojo Assets"].Remotes.Red:FireServer()
+      end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Activate Blue",
+ Callback = function()
+        game:GetService("ReplicatedStorage")["Reworked Gojo Assets"].Remotes.Blue:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Sukuma"
+})
+
+Tab:AddButton({
+ Name = "Activate Ultimate",
+ Callback = function()
+        game:GetService("ReplicatedStorage")["Yuji/SukunaReworkAssets"].Remotes.KingofCurses:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Cleave",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Cleave.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Dismantle",
+ Callback = function()
+        for i = 1, 30 do
+game:GetService("Players").LocalPlayer.Backpack.Dismantle.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Arrow of Death",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Fuga.Move1.Event1:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "MalevolentShrine",
+ Callback = function()
+        game:GetService("ReplicatedStorage").MalevolentShrine:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Hakari"
+})
+
+Tab:AddButton({
+ Name = "Spawn Container",
+ Callback = function()
+        game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.ContainerKick:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Container",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.Container:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Lucky Beatdown",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.LuckyBeatdown:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Shutter Doors",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.ShutterDoors:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Domainthing",
+ Callback = function()
+        game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.IdleDeathGambleFail:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+	Name = "KJ"
+})
+
+Tab:AddButton({
+ Name = "Powerful Stoic Bomb",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Stoic Bomb"]:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Ravage",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Ravage2:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Series Pummel",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Series Pummel"]:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Ground Blow",
+ Callback = function()
+        game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
+wait()
+for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Sweep Kick",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Sweep kick"]:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Beatdown",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Beatdown:FireServer()
+end
+   end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Options",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddDropdown({
+	Name = "Input Vip Characters",
+	Default = "1",
+	Options = {"KJ", "Jogo", "Shinjuku Gojo", "Kashimo", "Dagon", "Yuki", "Atomic", "Megumin"},
+	Callback = function(Value)
+		if Value == "KJ" then
+		local ohString1 = "Character"
+local ohString2 = "KJ"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Jogo" then
+		local ohString1 = "Character"
+local ohString2 = "Jogo"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Shinjuku Gojo" then
+		local ohString1 = "Character"
+local ohString2 = "Shinjuku Gojo"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Kashimo" then
+		local ohString1 = "Character"
+local ohString2 = "Kashimo"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Dagon" then
+		local ohString1 = "Character"
+local ohString2 = "Dagon"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Yuki" then
+		local ohString1 = "Character"
+local ohString2 = "Yuki"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Atomic" then
+		local ohString1 = "Character"
+local ohString2 = "Atomic"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+		if Value == "Megumin" then
+		local ohString1 = "Character"
+local ohString2 = "Megumin"
+local ohString3 = "Select"
+
+game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+		end
+	end    
+})
+
+Tab:AddButton({
+ Name = "Godmode",
+ Callback = function()
+        repeat wait(0.1)
+      if game:GetService("Players").LocalPlayer.Character.Humanoid.Health <= 120 then
+      game:GetService("ReplicatedStorage")["Yuji/SukunaReworkAssets"].Remotes.KingofCurses:FireServer()
+      end
+        until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+   end    
+})
+
+Tab:AddButton({
+ Name = "Kill all NPCs",
+ Callback = function()
+        sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
+sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
+for i, d in pairs(game.Workspace:GetDescendants()) do
+    if d.ClassName == 'Humanoid' and not game.Players:FindFirstChild(d.Parent.Name) then
+        d.Health = 0
+    end
+end
+   end    
+})
+
+Tab:AddButton({
+	Name = "Anti slow",
+	Callback = function()
+	repeat wait()
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local initialSpeed = 16
+local currentSpeed = Character.Humanoid.WalkSpeed
+
+if currentSpeed >= 0 and currentSpeed <= 10 then
+    Character.Humanoid.WalkSpeed = initialSpeed
+else
+    Character.Humanoid.WalkSpeed = currentSpeed
+end
+until game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0
+	end    
+})
+
+Tab:AddButton({
+	Name = "Anti inventory lock",
+	Callback = function()
+      while true do
+ task.wait()
+  local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+
+local sgui = game:GetService("StarterGui")
+sgui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
+end
+	end    
+})
+
+Tab:AddButton({
+ Name = "Anti jump block",
+ Callback = function()
+        while true do
+  wait()
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+
+local initialJump = 50
+local currentJump = Character.Humanoid.JumpPower
+
+if currentJump >= 0 and currentJump <= 10 then
+    Character.Humanoid.JumpPower = initialJump
+else
+    Character.Humanoid.JumpPower = currentJump
+end
+ end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Anti reclining",
+ Callback = function()
+        local plr = game.Players.LocalPlayer
+local char = plr.Character
+  for _, child in pairs(char:GetChildren()) do
+    if child:IsA("BasePart") then
+      child.Massless = false
+      child.CustomPhysicalProperties = PhysicalProperties.new(math.huge, math.huge, math.huge) 
+    end
+  end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Fix Camera",
+ Callback = function()
+        speaker = game.Players.LocalPlayer
+workspace.CurrentCamera:remove()
+ task.wait()
+ repeat wait() until speaker.Character ~= nil
+ workspace.CurrentCamera.CameraSubject = speaker.Character:FindFirstChildWhichIsA('Humanoid')
+ workspace.CurrentCamera.CameraType = "Custom"
+ speaker.CameraMinZoomDistance = 0.5
+ speaker.CameraMaxZoomDistance = 400
+ speaker.CameraMode = "Classic"
+ speaker.Character.Head.Anchored = false
+   end    
+})
+
+Tab:AddButton({
+ Name = "Auto Defrost",
+ Callback = function()
+        while true do
+  wait()
+for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+   task.spawn(function()
+    for i, x in next, v.Character:GetDescendants() do
+     if x.Name ~= floatName and x:IsA("BasePart") and x.Anchored then
+      x.Anchored = false
+     end
+    end
+   end)
+end
+end
+   end    
+})
+
+Tab:AddDropdown({
+	Name = "Another Abilities",
+	Default = "1",
+	Options = {"Serious Flip", "Domain Slashes"},
+	Callback = function(Value)
+		if Value == "Serious Flip" then
+		game:GetService("ReplicatedStorage").Events3.SeriousFlip:FireServer()
+		end
+		if Value == "Domain Slashes" then
+		game:GetService("ReplicatedStorage").NewTojiReworkAssets.Remotes.DomainSlashes:FireServer()
+		end
+	end    
+})
