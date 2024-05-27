@@ -9,7 +9,7 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Gojo (This is all ReplicatedStorage)"
+	Name = "Gojo"
 })
 
 Tab:AddButton({
@@ -115,6 +115,57 @@ Tab:AddButton({
  Name = "Domainthing",
  Callback = function()
         game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.IdleDeathGambleFail:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Choso"
+})
+
+Tab:AddButton({
+ Name = "Powerful Blood Slashes",
+ Callback = function()
+        for i = 1, 35 do
+game:GetService("Players").LocalPlayer.Backpack["Blood Slashes Barrage"]["Blood Slashes Barrage"].RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Exploding Blood",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Exploding Blood"]["Exploded Blood"].Remote:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Blood Combo",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["Flowing Blood Combo"]["Investigation Combo"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Piercing",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Piercing Blood"]["Piercing Blood"].Fire:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Bloody Shurikens",
+ Callback = function()
+        wait(0.5)
+for i = 1, 10 do
+wait(0.1)
+game:GetService("Players").LocalPlayer.Backpack["Slicing Exorcism"]["Slicing Exorcism"].Fire:FireServer()
+end
    end    
 })
 
