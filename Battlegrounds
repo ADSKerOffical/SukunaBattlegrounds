@@ -831,7 +831,7 @@ Tab:AddButton({
  Callback = function()
  OrionLib:MakeNotification({
 	Name = "Budgie Hub",
-	Content = "In order for the function "Apocalypse" to work you need to have a character *Megumi*",
+	Content = "In order for the function *Apocalypse* to work you need to have a character *Megumi*",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -852,3 +852,10 @@ Anti = hookmetamethod(game, "__namecall", function(self, ...)
 end
 
 AntiKick()
+
+OrionLib:MakeNotification({
+	Name = "Budgie Hub",
+	Content = "Creator - MEGACOCONUT",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
