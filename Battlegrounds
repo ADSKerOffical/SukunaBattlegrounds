@@ -704,6 +704,77 @@ end
 	end    
 })
 
+Tab:AddDropdown({
+	Name = "Another Abilities(Client)",
+	Default = "1",
+	Options = {"Summon BlackHole", "Summon Box Jail", "Omni Directorial Punch", "Summon Maximum Blue", "Transformation"},
+	Callback = function(Value)
+		if Value == "Summon BlackHole" then
+		local player = game.Players.LocalPlayer
+local args = {
+    [1] = "BlackHole",
+    [2] = "Fire",
+    [3] = {
+        ["mousepos"] = Vector3.new(6.929594993591309, 29.17209815979004, 20.470483779907227),
+        ["rootcf"] = player.Character.HumanoidRootPart.CFrame
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Yuki's Black Hole Assets"):WaitForChild("SendServer"):InvokeServer(unpack(args))
+		end
+		if Value == "Summon Box Jail" then
+		local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+    if player.Character then
+local args = {
+    [1] = {
+        ["Function"] = "Fire",
+        ["rootcf"] = player.Character.HumanoidRootPart.CFrame,
+        ["Name"] = "PrisonRealm"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("PrisonRealmAssets"):WaitForChild("Server"):InvokeServer(unpack(args))
+ end
+end
+		end
+		if Value == "Omni Directorial Punch" then
+		local player = game.Players.LocalPlayer
+local args = {
+    [1] = {
+        ["Function"] = "Fire",
+        ["Name"] = "OmniDirectionalPunch",
+        ["rootpos"] = player.Character.HumanoidRootPart.CFrame
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Server2"):InvokeServer(unpack(args))
+		end
+		if Value == "Summon Maximum Blue" then
+		local ohTable1 = {
+	["Function"] = "Fire",
+	["Name"] = "BlueMo",
+	["rootpos"] = CFrame.new(0.243130848, 32.1720963, 26.2248192, -0.701138854, -9.5513073e-08, 0.713024735, -2.12155058e-08, 1, 1.13092923e-07, -0.713024735, 6.41666631e-08, -0.701138854)
+}
+
+game:GetService("ReplicatedStorage").MaximumBlueAssets.Server:InvokeServer(ohTable1)
+		end
+		if Value == "Transformation" then
+		local args = {
+    [1] = "Mahito",
+    [2] = "Fire",
+    [3] = {
+        ["mousepos"] = Vector3.new(-1.119132399559021, 738.216552734375, -2.02603816986084),
+        ["rootcf"] = CFrame.new(-0.25276821851730347, 741.2163696289062, 2.906960964202881, 0.999436616897583, 7.712181115948624e-08, 0.033562321215867996, -7.77368711624149e-08, 1, 1.7021072551415273e-08, -0.033562321215867996, -1.9620513214135826e-08, 0.999436616897583)
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SendServer"):InvokeServer(unpack(args))
+		end
+	end    
+})
+
 Tab:AddButton({
  Name = "UTG (Ultimate Trolling Gui)",
  Callback = function()
