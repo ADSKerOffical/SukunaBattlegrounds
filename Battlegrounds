@@ -758,7 +758,7 @@ end
 Tab:AddDropdown({
 	Name = "Another Abilities(Client)",
 	Default = "1",
-	Options = {"Summon BlackHole", "Summon Box Jail", "Omni Directorial Punch", "Summon Maximum Blue", "Transformation"},
+	Options = {"Summon BlackHole", "Summon Box Jail", "Omni Directorial Punch", "Summon Maximum Blue", "Transformation", "Judge", "Atomic Folder"},
 	Callback = function(Value)
 		if Value == "Summon BlackHole" then
 		local player = game.Players.LocalPlayer
@@ -823,6 +823,26 @@ game:GetService("ReplicatedStorage").MaximumBlueAssets.Server:InvokeServer(ohTab
 
 game:GetService("ReplicatedStorage"):WaitForChild("SendServer"):InvokeServer(unpack(args))
 		end
+if Value == "Judge" then
+local args = {
+    [1] = "SwordSkill",
+    [2] = "Fire",
+    [3] = {
+        ["mousepos"] = Vector3.new(-88.49490356445312, 29.17207908630371, 115.14684295654297),
+        ["rootcf"] = CFrame.new(-89.52395629882812, 32.17204666137695, 110.68917846679688, 0.9925284385681152, -4.4750059657872043e-08, -0.12201359122991562, 3.354318423021141e-08, 1, -9.390343080895036e-08, 0.12201359122991562, 8.910910054282795e-08, 0.9925284385681152)
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Divine Judgement Assets"):WaitForChild("SendServer"):InvokeServer(unpack(args))
+end
+if Value == "Atomic Folder" then
+local ohTable1 = {
+ ["Name"] = "Atomic",
+ ["Function"] = "Fire"
+}
+
+game:GetService("ReplicatedStorage").Server3:InvokeServer(ohTable1)
+end
 	end    
 })
 
@@ -837,6 +857,108 @@ Tab:AddButton({
 })
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/UTG-1/main/SukunaBattlegrounds"))()
    end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Extra",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+ Name = "Sneezing Aura",
+ Callback = function()
+ repeat
+  wait()
+local args = {
+    [1] = "Punch",
+    [2] = "Fire",
+    [3] = {
+        ["mousepos"] = Vector3.new(112.32048034667969, 26.271419525146484, -57.01249694824219),
+        ["rootcf"] = CFrame.new(127.53649139404297, 29.27141571044922, -56.16483688354492, -0.38626739382743835, 0, 0.9223868250846863, 0, 1, 0, -0.9223868250846863, 0, -0.38626739382743835)
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Serious Sneeze Assets"):WaitForChild("SendServer"):InvokeServer(unpack(args))
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+ end    
+})
+
+Tab:AddTextbox({
+	Name = "Invisible Murder",
+	Default = "Name",
+	TextDisappear = true,
+	Callback = function(Value)
+		last_pick_sin_mrazy = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local function ActOne()
+game:GetService("ReplicatedStorage")["Yuji/SukunaReworkAssets"].Remotes.KingofCurses:FireServer()
+
+local ohString1 = "DomainSummon"
+local ohCFrame2 = CFrame.new(-173.471024, 29.1463394, 26.0836563, -0.264251322, 7.09966415e-08, 0.964453876, 5.60420723e-08, 1, -5.82583084e-08, -0.964453876, 3.86551591e-08, -0.264251322)
+
+game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1, ohCFrame2)
+
+local spinSpeed = 15
+local Spin = Instance.new("BodyAngularVelocity")
+Spin.Name = "Spinning"
+Spin.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+Spin.MaxTorque = Vector3.new(0, math.huge, 0)
+Spin.AngularVelocity = Vector3.new(0,spinSpeed,0)
+end
+
+local function ActTwo()
+PlayerName = Value
+local function findPlayer(name)
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        if player.Name:lower():match(name:lower()) or player.DisplayName:lower():match(name:lower()) then
+            return player
+        end
+    end
+    return nil
+end
+
+local function teleportToPlayer(targetPlayer)
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    local targetCharacter = targetPlayer.Character or targetPlayer.CharacterAdded:Wait()
+    local targetHumanoidRootPart = targetCharacter:WaitForChild("HumanoidRootPart")
+
+    humanoidRootPart.CFrame = targetHumanoidRootPart.CFrame
+end
+
+local targetName = PlayerName
+local targetPlayer = findPlayer(targetName)
+
+if targetPlayer then
+wait(1)
+    teleportToPlayer(targetPlayer)
+wait(0.1)
+for i = 1, 30 do
+game:GetService("Players").LocalPlayer.Backpack.Dismantle.LocalScript.Event:FireServer()
+end
+wait(0.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = last_pick_sin_mrazy
+wait()
+speaker = game.Players.LocalPlayer
+for i,v in pairs(speaker.Character:GetDescendants()) do
+  if v:IsA("BodyVelocity") or v:IsA("BodyGyro") or v:IsA("RocketPropulsion") or v:IsA("BodyThrust") or v:IsA("BodyAngularVelocity") or v:IsA("AngularVelocity") or v:IsA("BodyForce") or v:IsA("VectorForce") or v:IsA("LineForce") then
+   v:Destroy()
+  end
+ end
+else
+    speaker = game.Players.LocalPlayer
+for i,v in pairs(speaker.Character:GetDescendants()) do
+  if v:IsA("BodyVelocity") or v:IsA("BodyGyro") or v:IsA("RocketPropulsion") or v:IsA("BodyThrust") or v:IsA("BodyAngularVelocity") or v:IsA("AngularVelocity") or v:IsA("BodyForce") or v:IsA("VectorForce") or v:IsA("LineForce") then
+   v:Destroy()
+  end
+ end
+end
+ end
+
+ActOne()
+ActTwo()
+	end	  
 })
 
 local function AntiKick()
