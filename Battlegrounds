@@ -898,7 +898,7 @@ local ohCFrame2 = CFrame.new(-173.471024, 29.1463394, 26.0836563, -0.264251322, 
 
 game:GetService("ReplicatedStorage").Sukuna2.BeowulfRemote:FireServer(ohString1, ohCFrame2)
 
-local spinSpeed = 15
+local spinSpeed = 30
 local Spin = Instance.new("BodyAngularVelocity")
 Spin.Name = "Spinning"
 Spin.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -935,6 +935,7 @@ wait(1)
     teleportToPlayer(targetPlayer)
 wait(0.1)
 for i = 1, 30 do
+task.wait()
 game:GetService("Players").LocalPlayer.Backpack.Dismantle.LocalScript.Event:FireServer()
 end
 wait(0.2)
