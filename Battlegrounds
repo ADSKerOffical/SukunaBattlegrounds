@@ -1137,7 +1137,7 @@ AntiKick()
 
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
-	Content = "Creator - MEGACOCONUT",
+	Content = "Creator - MEGACOCONUT and Hamsterovich",
 	Image = "rbxassetid://4483345998",
-	Time = 5
+	Time = 10
 })
