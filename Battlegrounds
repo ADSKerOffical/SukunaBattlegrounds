@@ -882,7 +882,7 @@ game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAs
 end
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
-	Content = "Creator - Panchoo",
+	Content = "Traitor?",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
