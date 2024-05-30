@@ -114,7 +114,7 @@ end
 Tab:AddButton({
  Name = "Domainthing",
  Callback = function()
-        game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.IdleDeathGambleFail:FireServer()
+        game:GetService("ReplicatedStorage").CompletelyNewHakariAssets.Remotes.IdleDeathGamble:FireServer()
    end    
 })
 
@@ -479,6 +479,87 @@ Tab:AddButton({
  Name = "Ultimate Distortion",
  Callback = function()
         game:GetService("Players").LocalPlayer.Backpack["Ultimate Distortion"].Initilizer.Event:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Shinjuku Gojo"
+})
+
+Tab:AddButton({
+ Name = "Powerful Black Flash",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Black Flash Beatdown"]["Black Flash"].Beatdown:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Ultra Domain",
+ Callback = function()
+        for i = 1, 50 do
+game:GetService("Players").LocalPlayer.Backpack["0.2 Second Unlimited Void"].Domain.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Final Black Flash",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("ReplicatedStorage").FinalBlackFlashAssetsShinjukuGojo.Events.GojoBlackFlash:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "200% Hollow Purple",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["200% Hollow Purple"].Skill.Event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Unlimited Void",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Maximum Unlimited Void"].Skill.InfinityVoid:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Final Hollow Purple",
+ Callback = function()
+        local ohString1 = "FinalHollowPurple"
+game:GetService("ReplicatedStorage")["Final Hollow Purple Assets"].Events.Abilitys.Gojo:FireServer(ohString1)
+   end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Young Gojo"
+})
+
+Tab:AddButton({
+ Name = "Powerful Maximum Red",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Maximum Reversal Red (Use Twice)"]["Maximum Reversal Red"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Transformation",
+ Callback = function()
+        local ohBoolean1 = false
+game:GetService("ReplicatedStorage").YoungGojoAssets.Transformation:FireServer(ohBoolean1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Hollow Purple",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Hollow Purple"].Skill.Event:FireServer()
    end    
 })
 
