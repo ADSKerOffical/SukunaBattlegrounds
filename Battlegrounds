@@ -1105,10 +1105,14 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddButton({
+local SA = false
+
+Tab:AddToggle({
  Name = "Sneezing Aura",
- Callback = function()
- repeat
+ Default = false,
+ Callback = function(Value)
+ SA = Value
+ while SA do
   wait()
 local args = {
     [1] = "Punch",
@@ -1120,7 +1124,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Serious Sneeze Assets"):WaitForChild("SendServer"):InvokeServer(unpack(args))
-until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end
  end    
 })
 
