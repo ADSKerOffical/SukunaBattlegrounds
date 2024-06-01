@@ -1202,6 +1202,89 @@ ActTwo()
 	end	  
 })
 
+Tab:AddButton({
+ Name = "KJ Abilities Pack",
+ Callback = function()
+        local function toolOne()
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Series Pummel"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Series Pummel"]:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+end
+
+local function toolTwo()
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Ground Blow"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
+wait()
+for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Ground Blow"]:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+end
+
+local function toolThree()
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Sweep Kick"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Sweep kick"]:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+end
+
+local function toolFour()
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Beatdown"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 10 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"].Beatdown:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+end
+
+local function toolFive()
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Stoic Bomb"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 5 do
+game:GetService("ReplicatedStorage").FullKJAssetsForUpdate["KJ Remotes"]["Stoic Bomb"]:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+end
+
+toolOne()
+toolTwo()
+toolThree()
+toolFour()
+toolFive()
+   end    
+})
+
 local function AntiKick()
 local plra = game:GetService("Players").LocalPlayer
 getgenv().Anti = true
