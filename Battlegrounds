@@ -430,41 +430,72 @@ end
 })
 
 Tab:AddButton({
- Name = "Mahoraga Apocalypse(Patched)",
+ Name = "Mahoraga Morph",
  Callback = function()
-        local Player = game.Players.LocalPlayer
+        local players = game:GetService("Players"):GetPlayers()
 
+for _, player in ipairs(players) do
+    if player.Character and player.Character ~= game.Players.LocalPlayer.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+local ohVector31 = player.Character.HumanoidRootPart.Position
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Use.RemoteEvent:FireServer(ohVector31)
+  end
+end
+   end    
+})
+
+Tab:AddLabel("Mahoraga Version")
+
+Tab:AddButton({
+ Name = "Slash",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.Slash.LocalScript.RemoteEvent:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Ground Slam",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Ground Slam"].LocalScript.RemoteEvent:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Scream",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Roar.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+local RT = false
+
+Tab:AddToggle({
+	Name = "Recovery Technique",
+	Default = false,
+	Callback = function(Value)
+RT = Value
+ while RT do wait()
+   if game.Players.LocalPlayer.Character.Humanoid.Health <= 290 then
+   local Player = game.Players.LocalPlayer
 local hasTool = false
 for _, tool in ipairs(Player.Backpack:GetChildren()) do
-    if tool.Name == "SUMMON MAHORAGA!" then
+    if tool.Name == "Heal/Adapt" then
         hasTool = true
         break
     end
 end
 
 if not hasTool then
-  local players = game:GetService("Players"):GetPlayers()
-
-for _, player in ipairs(players) do
-    if player.Character and player.Character ~= game.Players.LocalPlayer.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-local ohVector31 = player.Character.HumanoidRootPart.Position
-
-game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Use.RemoteEvent:FireServer(ohVector31)
-  end
-end
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
 end
 
 if hasTool then
-local players = game:GetService("Players"):GetPlayers()
-
-for _, player in ipairs(players) do
-    if player.Character and player.Character ~= game.Players.LocalPlayer.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        local ohVector31 = player.Character.HumanoidRootPart.Position
- game:GetService("Players").LocalPlayer.Backpack["SUMMON MAHORAGA!"].Use.RemoteEvent:FireServer(ohVector31)
-    end
+game:GetService("Players").LocalPlayer.Backpack["Heal/Adapt"].LocalScript.RemoteEvent:FireServer()
 end
-end
-   end    
+   end
+ end
+	end    
 })
 
 local Section = Tab:AddSection({
