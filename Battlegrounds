@@ -33,6 +33,39 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
+ Name = "Powerful Cursed Barrage",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Cursed Barrage"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Rapid Cuts",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Rapid Cuts"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+local SCT = false
+
+Tab:AddToggle({
+	Name = "Spam Car Throw",
+	Default = false,
+	Callback = function(Value)
+ SCT = Value
+ while SCT do wait(0.2)
+  if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Car Throw") then
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Car Throw"):FindFirstChild("Car Throw").Throw:FireServer()
+  end
+end
+	end    
+})
+
+Tab:AddButton({
  Name = "Activate Ultimate",
  Callback = function()
         game:GetService("ReplicatedStorage")["Yuji/SukunaReworkAssets"].Remotes.KingofCurses:FireServer()
@@ -1465,6 +1498,59 @@ toolThree()
 toolFour()
 toolFive()
    end    
+})
+
+local RPA = false
+
+Tab:AddToggle({
+	Name = "Red Plasma Aura",
+	Default = false,
+	Callback = function(Value)
+	RPA = Value
+		local player = game:GetService("Players").LocalPlayer
+while RPA do wait(0.5)
+    local parts = workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 7)
+    local foundEntity = false
+    for _, part in ipairs(parts) do
+        if (part:IsA("BasePart") or part:IsA("UnionOperation") or part:IsA("Model")) and not part.Anchored and part:IsDescendantOf(workspace) and not part:IsDescendantOf(player.Character) then
+            foundEntity = true
+            break
+        end
+    end
+    if foundEntity then
+        for i = 1, 5 do
+        game:GetService("ReplicatedStorage")["Reworked Gojo Assets"].Remotes.Red:FireServer()
+      end
+    else
+        
+    end
+end
+	end    
+})
+
+local DD = false
+
+Tab:AddToggle({
+	Name = "Deadly Debt",
+	Default = false,
+	Callback = function(Value)
+DD = Value
+		while DD do wait(0.2)
+	if game.Players.LocalPlayer.Character.Humanoid.Health <= 0 then
+	local player = game.Players.LocalPlayer
+local args = {
+    [1] = "BlackHole",
+    [2] = "Fire",
+    [3] = {
+        ["mousepos"] = Vector3.new(6.929594993591309, 29.17209815979004, 20.470483779907227),
+        ["rootcf"] = player.Character.HumanoidRootPart.CFrame
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Yuki's Black Hole Assets"):WaitForChild("SendServer"):InvokeServer(unpack(args))
+	end
+		end
+	end    
 })
 
 local function AntiKick()
