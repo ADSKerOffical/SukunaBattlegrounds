@@ -229,6 +229,28 @@ end
    end    
 })
 
+Tab:AddButton({
+ Name = "Unlimited Flex Works",
+ Callback = function()
+        local Player = game.Players.LocalPlayer
+local hasTool = false
+for _, tool in ipairs(Player.Backpack:GetChildren()) do
+    if tool.Name == "Unlimited Flex Works" then
+        hasTool = true
+        break
+    end
+end
+
+if not hasTool then
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+end
+
+if hasTool then
+game:GetService("Players").LocalPlayer.Backpack["Unlimited Flex Works"].LocalScript.Event:FireServer()
+end
+   end
+})
+
 local Section = Tab:AddSection({
 	Name = "Jogo"
 })
@@ -282,6 +304,15 @@ game:GetService("Players").LocalPlayer.Backpack["Pyroburst Rain"]["Pyroburst Rai
 end
   end
 end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Asteroid",
+ Callback = function()
+        for i = 1, 5 do
+        game:GetService("ReplicatedStorage").RemotesForSkillsThatNeedToBeInSSS["Max Meteor"]:FireServer()
+        end
    end    
 })
 
@@ -399,7 +430,7 @@ end
 })
 
 Tab:AddButton({
- Name = "Mahoraga Apocalypse",
+ Name = "Mahoraga Apocalypse(Patched)",
  Callback = function()
         local Player = game.Players.LocalPlayer
 
@@ -560,6 +591,122 @@ Tab:AddButton({
  Name = "Hollow Purple",
  Callback = function()
         game:GetService("Players").LocalPlayer.Backpack["Hollow Purple"].Skill.Event:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Atomic"
+})
+
+Tab:AddButton({
+ Name = "Weak Punch",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Slime Arm Blade"].WeaponCombat.RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Atomic",
+ Callback = function()
+        local ohTable1 = {
+ ["Name"] = "Atomic",
+ ["Function"] = "Fire"
+}
+
+game:GetService("ReplicatedStorage").Server3:InvokeServer(ohTable1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Activate Atomic Folder(Equip)",
+ Callback = function()
+        game:GetService("ReplicatedStorage").AtomicFolder.Event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Lag Server(Equip)",
+ Callback = function()
+        for i = 1, 150 do
+ task.wait()
+game:GetService("ReplicatedStorage").AtomicFolder.Event:FireServer()
+end
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Ichigo"
+})
+
+Tab:AddButton({
+ Name = "Powerful Getsuga Barrage",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Getsuga Barrage"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Getsuga Tenshou",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Getsuga Tenshou"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Getsuga Slashes",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Getsuga Slashes"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful High Speed Slash",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["High Speed Slash"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Activate Hollow Mask",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.HollowMask.Remote:FireServer()
+   end    
+})
+
+Tab:AddLabel("Ultimate Mode")
+
+Tab:AddButton({
+ Name = "Incinerate",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Cero.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Grab Cero",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Grab Cero"].LocalScript.Event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Loud Scream",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Scream.LocalScript.Event:FireServer()
+end
    end    
 })
 
