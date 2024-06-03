@@ -659,6 +659,48 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
+	Name = "Megumin(By Hamsterovich)"
+})
+
+Tab:AddButton({
+ Name = "Powerful Suprise Detonation",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Suprise Detonation"].Move1.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Explosion!!!",
+ Callback = function()
+        local Player = game.Players.LocalPlayer
+local hasTool = false
+for _, tool in ipairs(Player.Backpack:GetChildren()) do
+    if tool.Name == "EXPLOSION!!!" then
+        hasTool = true
+        break
+    end
+end
+
+if not hasTool then
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Event:FireServer()
+end
+
+if hasTool then
+game:GetService("Players").LocalPlayer.Backpack["EXPLOSION!!!"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Fake Explosion",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Kono_Explosion_RS_Folder.Remotes.Exp_RE:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
  Name = "Atomic"
 })
 
