@@ -1352,6 +1352,22 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "Admin Commands(Creator Only)",
+ Callback = function()
+        if  game.Players.LocalPlayer.UserId == 4636825706 or game.Players.LocalPlayer.UserId == 5042713445 or game.Players.LocalPlayer.UserId == 6036506267 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminCmds/main/SukunaBattlegrounds"))()
+else
+OrionLib:MakeNotification({
+	Name = "Budgie Hub",
+	Content = "To unlock this you need to become one of the creators",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Extra",
 	Icon = "rbxassetid://4483345998",
