@@ -152,6 +152,259 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
+    Name = "Toji Fushiguro (By Hamsterovich)"
+})
+
+Tab:AddButton({
+    Name = "Powerful Through out Earth",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Through out Earth" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        for i = 1, 10 do
+    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Script.Event:FireServer()
+        end
+    end
+
+    if hasTool then
+            for i = 1, 10 do
+            game:GetService("Players").LocalPlayer.Backpack["Through out Earth"].Script.Event:FireServer()
+        end
+    end
+    end
+})
+
+Tab:AddButton({
+    Name = "Wrong Way (damage - 35. Ability can't damage more.)",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Wrong Way" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        for i = 1, 15 do
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN["Inverted Spear of Heaven"].Event:FireServer()
+        end
+    end
+
+    if hasTool then
+            for i = 1, 15 do
+            game:GetService("Players").LocalPlayer.Backpack["Wrong Way"]["Inverted Spear of Heaven"].Event:FireServer()
+        end
+    end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Heavenly Restriction (Air Variant)",
+    Callback = function()
+        for i = 1, 8 do
+        game:GetService("ReplicatedStorage").NewTojiReworkAssets.Remotes.Punches:FireServer()
+        end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Playful Cloud",
+    Callback = function()
+        for i = 1, 15 do
+        game:GetService("ReplicatedStorage").NewTojiReworkAssets.Remotes.PlayfulCloud:FireServer()
+        end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Vanishing",
+    Callback = function()
+        for i = 1, 28 do
+            game:GetService("ReplicatedStorage").NewTojiReworkAssets.Remotes.Vanishing:FireServer()
+        end
+    end
+})
+
+Tab:AddButton({
+    Name = "Domain Breaker",
+    Callback = function()
+            game:GetService("ReplicatedStorage").NewTojiReworkAssets.Remotes.DomainSlashes:FireServer()
+    end
+})
+
+local Section = Tab:AddSection({
+    Name = "Yuta Okkotsu (By Hamsterovich)"
+})
+
+Tab:AddButton({
+    Name = "Reverse Cursed Technique",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Reverse Cursed Technique" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Script.Event:FireServer()
+    end
+
+    if hasTool then
+    game:GetService("Players").LocalPlayer.Backpack["Reverse Cursed Technique"].Script.Event:FireServer()
+    end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Rika Slash",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Rika Slash" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        for i = 1, 10 do
+    game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+        end
+    end
+
+    if hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Rika Slash"].LocalScript.Event:FireServer()
+        end
+    end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Pure Love",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Pure Love" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+        end
+    end
+
+    if hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Pure Love"].LocalScript.Event:FireServer()
+        end
+    end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Cursed Slashes",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Cursed Slashes" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+        end
+    end
+
+    if hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Cursed Slashes"].LocalScript.Event:FireServer()
+        end
+    end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Cursed Speech",
+    Callback = function()
+        for i = 1, 10 do
+
+game:GetService("ReplicatedStorage").RemotesForFlyBackFinisherSkills["Cursed Speech"]:FireServer()
+        end
+    end
+})
+
+Tab:AddButton({
+    Name = "Powerful Black Flash",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "Black Flash" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+        end
+    end
+
+    if hasTool then
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Black Flash"].LocalScript.Event:FireServer()
+        end
+    end
+    end
+})
+
+
+Tab:AddButton({
+    Name = "Domain Expansion",
+    Callback = function()
+        local Player = game.Players.LocalPlayer
+        local hasTool = false
+        for _, tool in ipairs(Player.Backpack:GetChildren()) do
+        if tool.Name == "All-Encompassing Unequivocal Love" then
+        hasTool = true
+        break
+        end
+    end
+
+    if not hasTool then
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.Activation.Remote:FireServer()
+    end
+
+    if hasTool then
+        game:GetService("Players").LocalPlayer.Backpack["All-Encompassing Unequivocal Love"].Activation.Remote:FireServer()
+    end
+    end
+})
+
+local Section = Tab:AddSection({
  Name = "Choso"
 })
 
