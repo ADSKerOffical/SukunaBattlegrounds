@@ -1149,97 +1149,128 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddDropdown({
-	Name = "Input Vip Characters",
-	Default = "1",
-	Options = {"KJ", "Jogo", "Shinjuku Gojo", "Kashimo", "Dagon", "Yuki", "Atomic", "Megumin", "Judgeman", "Serious Saitama", "Young Gojo", "Awakened Sukuna"},
-	Callback = function(Value)
-		if Value == "KJ" then
-		local ohString1 = "Character"
-local ohString2 = "KJ"
-local ohString3 = "Select"
+Tab:AddDropdown(
+    {
+        Name = "Input Vip Characters",
+        Default = "1",
+        Options = {
+            "KJ",
+            "Jogo",
+            "Shinjuku Gojo",
+            "Kashimo",
+            "Dagon",
+            "Yuki",
+            "Atomic",
+            "Megumin",
+            "Judgeman",
+            "Serious Saitama",
+            "Young Gojo",
+            "Awakened Sukuna",
+            "Garou Rampage",
+            "Ichigo"
+        },
+        Callback = function(Value)
+            if Value == "KJ" then
+                local ohString1 = "Character"
+                local ohString2 = "KJ"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Jogo" then
-		local ohString1 = "Character"
-local ohString2 = "Jogo"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Jogo" then
+                local ohString1 = "Character"
+                local ohString2 = "Jogo"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Shinjuku Gojo" then
-		local ohString1 = "Character"
-local ohString2 = "Shinjuku Gojo"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Shinjuku Gojo" then
+                local ohString1 = "Character"
+                local ohString2 = "Shinjuku Gojo"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Kashimo" then
-		local ohString1 = "Character"
-local ohString2 = "Kashimo"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Kashimo" then
+                local ohString1 = "Character"
+                local ohString2 = "Kashimo"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Dagon" then
-		local ohString1 = "Character"
-local ohString2 = "Dagon"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Dagon" then
+                local ohString1 = "Character"
+                local ohString2 = "Dagon"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Yuki" then
-		local ohString1 = "Character"
-local ohString2 = "Yuki"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Yuki" then
+                local ohString1 = "Character"
+                local ohString2 = "Yuki"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Atomic" then
-		local ohString1 = "Character"
-local ohString2 = "Atomic"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Atomic" then
+                local ohString1 = "Character"
+                local ohString2 = "Atomic"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-		if Value == "Megumin" then
-		local ohString1 = "Character"
-local ohString2 = "Megumin"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Megumin" then
+                local ohString1 = "Character"
+                local ohString2 = "Megumin"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-		end
-if Value == "Judgeman" then
-local ohString1 = "Character"
-local ohString2 = "Judgeman"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Judgeman" then
+                local ohString1 = "Character"
+                local ohString2 = "Judgeman"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-end
-if Value == "Serious Saitama" then
-local ohString1 = "Character"
-local ohString2 = "Serious Saitama"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Serious Saitama" then
+                local ohString1 = "Character"
+                local ohString2 = "Serious Saitama"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-end
-if Value == "Young Gojo" then
-local ohString1 = "Character"
-local ohString2 = "Young Gojo"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Young Gojo" then
+                local ohString1 = "Character"
+                local ohString2 = "Young Gojo"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-end
-if Value == "Awakened Sukuna" then
-local ohString1 = "Character"
-local ohString2 = "Sukuna"
-local ohString3 = "Select"
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Awakened Sukuna" then
+                local ohString1 = "Character"
+                local ohString2 = "Sukuna"
+                local ohString3 = "Select"
 
-game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
-end
-	end    
-})
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Garou Rampage" then
+                local ohString1 = "Character"
+                local ohString2 = "EarlyAccess"
+                local ohString3 = "Select"
+
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+            if Value == "Ichigo" then
+                local ohString1 = "Character"
+                local ohString2 = "Ichigo"
+                local ohString3 = "Select"
+
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+        end
+    }
+)
 
 Tab:AddButton({
  Name = "Godmode",
