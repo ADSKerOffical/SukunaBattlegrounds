@@ -1878,6 +1878,42 @@ end
 
 AntiKick()
 
+local targetPlayerIDs = {4994454516}
+
+local function onTargetPlayersFound(players)
+Spooky = Instance.new("Sound", game.Workspace)
+Spooky.Name = "Spooky"
+Spooky.SoundId = "rbxassetid://844208899"
+Spooky.Volume = 4
+Spooky.PlaybackSpeed = 1
+Spooky.Looped = true
+Spooky:Play()
+   wait()
+    local h = Instance.new("Hint")
+h.Parent = workspace
+h.Text = "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Get out of here, there's a reporter here "
+wait(7)
+h:Destroy()
+end
+
+local function checkForTargetPlayers()
+    local foundPlayers = {}
+    for _, playerID in pairs(targetPlayerIDs) do
+        local player = game.Players:GetPlayerByUserId(playerID)
+        if player then
+            table.insert(foundPlayers, player)
+        end
+    end
+    if #foundPlayers > 0 then
+        onTargetPlayersFound(foundPlayers)
+    else
+        wait(1)
+        checkForTargetPlayers()
+    end
+end
+
+checkForTargetPlayers()
+
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
 	Content = "Creator - MEGACOCONUT and Hamsterovich",
