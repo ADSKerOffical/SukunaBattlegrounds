@@ -1909,7 +1909,7 @@ end
 
 AntiKick()
 
-local targetPlayerIDs = {4994454516}
+local targetPlayerIDs = {4994454516, 3564246732, 1263588581, 1973784642}
 
 local function onTargetPlayersFound(players)
 Spooky = Instance.new("Sound", game.Workspace)
@@ -1945,9 +1945,18 @@ end
 
 checkForTargetPlayers()
 
+if game.Players.LocalPlayer.UserId ~= 3677694780 then
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
 	Content = "Creator - MEGACOCONUT and Hamsterovich",
 	Image = "rbxassetid://4483345998",
 	Time = 10
 })
+else
+OrionLib:MakeNotification({
+	Name = "MEGACOCONUT",
+	Content = "You are a traitor...",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+end
