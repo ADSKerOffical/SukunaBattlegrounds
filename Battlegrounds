@@ -29,7 +29,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Sukuma"
+	Name = "Sukuma(Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -405,7 +405,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
- Name = "Choso"
+ Name = "Choso (Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -538,7 +538,7 @@ end
 })
 
 local Section = Tab:AddSection({
-	Name = "Jogo"
+	Name = "Jogo(Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -641,7 +641,7 @@ end
 })
 
 local Section = Tab:AddSection({
-	Name = "Megumi"
+	Name = "Megumi(Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -831,7 +831,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Shinjuku Gojo"
+	Name = "Shinjuku Gojo(Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
@@ -996,7 +996,7 @@ end
 })
 
 local Section = Tab:AddSection({
- Name = "Ichigo"
+ Name = "Ichigo(Collaboration)"
 })
 
 Tab:AddButton({
@@ -1070,7 +1070,7 @@ end
 })
 
 local Section = Tab:AddSection({
- Name = "Sukuna(OP)"
+ Name = "Awakened Sukuna(Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
