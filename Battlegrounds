@@ -1069,6 +1069,50 @@ end
    end    
 })
 
+Tab:AddLabel("Mugetsu Mode")
+
+Tab:AddButton({
+ Name = "Become Mugetsu",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Become Mugetsu if was ichigo",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.HollowMask.Remote:FireServer()
+        wait(5)
+        game:GetService("Players").LocalPlayer.Backpack.COOLDOWN.LocalScript.Event:FireServer()
+   end    
+})
+
+
+Tab:AddButton({
+ Name = "Activate Mugetsu",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.Mugetsu.LocalScript.Event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Activate Mugetsu and not die",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.Mugetsu.LocalScript.Event:FireServer()
+wait(10)
+game:GetService("ReplicatedStorage")["Yuji/SukunaReworkAssets"].Remotes.KingofCurses:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Cover the server",
+ Callback = function()
+        for i = 1, 300 do task.wait()
+game:GetService("Players").LocalPlayer.Backpack.Mugetsu.LocalScript.Event:FireServer()
+end
+   end    
+})
+
 local Section = Tab:AddSection({
  Name = "Awakened Sukuna(Created MEGACOCONUT)"
 })
