@@ -1681,6 +1681,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+ Name = "Non-Admin Commands",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/NonAdminCmds/main/SukunaBattlegrounds"))()
+   end    
+})
+
+Tab:AddButton({
  Name = "Admin Commands(Creator Only)",
  Callback = function()
         if  game.Players.LocalPlayer.UserId == 4636825706 or game.Players.LocalPlayer.UserId == 5042713445 or game.Players.LocalPlayer.UserId == 6036506267 or game.Players.LocalPlayer.UserId == 6103186375 then
@@ -1940,15 +1947,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Yuki's Black Hole Assets"):Wa
 })
 
 local function AntiKick()
-local plra = game:GetService("Players").LocalPlayer
-getgenv().Anti = true
-local Anti
-Anti = hookmetamethod(game, "__namecall", function(self, ...)
-        if self == plra and getnamecallmethod():lower() == "kick" and getgenv().Anti then
-            return warn("[ANTI-KICK] Client Tried To Call Kick Function On LocalPlayer")
-        end
-        return Anti(self, ...)
-    end)
+xpcall(function() OldNameCall = hookmetamethod(game.Players.LocalPlayer, "__namecall", function(Self, ...) local Args = {...} local NamecallMethod = getnamecallmethod() if Self == game.Players.LocalPlayer and NamecallMethod == "Kick" then return nil end return OldNameCall(Self, ...) end) print("Anti Kick Enabled.") end, function(e) print(e) end)
 end
 
 AntiKick()
