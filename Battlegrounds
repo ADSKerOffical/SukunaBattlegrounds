@@ -1909,7 +1909,7 @@ end
 
 AntiKick()
 
-local targetPlayerIDs = {4994454516, 3564246732, 1263588581, 1973784642}
+local targetPlayerIDs = {4994454516, 3564246732, 1263588581, 1973784642, 5753019087, 2964331585}
 
 local function onTargetPlayersFound(players)
 Spooky = Instance.new("Sound", game.Workspace)
