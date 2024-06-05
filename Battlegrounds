@@ -1439,6 +1439,7 @@ Tab:AddButton({
 local Player = game.Players.LocalPlayer
 local Character = Player.Character or Player.CharacterAdded:Wait()
 Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+Character.Humanoid.UseJumpPower = true
 
 local initialJump = 50
 local currentJump = Character.Humanoid.JumpPower
@@ -1487,11 +1488,13 @@ Tab:AddButton({
  Callback = function()
         while true do
   wait()
+Humanoid = game.Players.LocalPlayer.Character.Humanoid
 for i, v in pairs(game:GetService("Players"):GetPlayers()) do
    task.spawn(function()
     for i, x in next, v.Character:GetDescendants() do
      if x.Name ~= floatName and x:IsA("BasePart") and x.Anchored then
       x.Anchored = false
+      Humanoid.AutoRotate = true
      end
     end
    end)
