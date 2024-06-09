@@ -456,6 +456,81 @@ end
 })
 
 local Section = Tab:AddSection({
+ Name = "Nanami"
+})
+
+Tab:AddButton({
+ Name = "Slash of Death",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Flash Slash"]["Flash Slash"].RemoteEventslash:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Consecutive slashes",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Corner Slashes"]["Corner Slashes"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Blood Stains",
+ Callback = function()
+        for i = 1, 100 do
+task.wait()
+game:GetService("Players").LocalPlayer.Backpack["Triple Surge"]["Triple Surge"].Fire3:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Seal of Death",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Triple Surge"]["Triple Surge"].Fire3:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Super accurate cut",
+ Callback = function()
+        for i = 1, 30 do
+game:GetService("Players").LocalPlayer.Backpack["Ratio Strike"]["Ratio Strike"].Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Cursed Aura",
+ Callback = function()
+        local ohBoolean1 = false
+game:GetService("ReplicatedStorage").CrusedEnergy:FireServer(ohBoolean1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Blood Stains Tool",
+ Callback = function()
+        local tool = Instance.new("Tool")
+tool.Name = "Blood Stains Tool"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Triple Surge"]["Triple Surge"].Fire3:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+   end    
+})
+
+local Section = Tab:AddSection({
 	Name = "KJ"
 })
 
@@ -1325,6 +1400,26 @@ Tab:AddButton({
       end
         until game.Players.LocalPlayer.Character.Humanoid.Health == 0
    end    
+})
+
+local GMo = false
+Tab:AddToggle({
+	Name = "Godmode v2",
+	Default = false,
+	Callback = function(Value)
+	GMo = Value
+		while GMo do wait()
+local ohBoolean1 = true
+game:GetService("ReplicatedStorage").CrusedEnergy:FireServer(ohBoolean1)
+end
+	end    
+})
+
+Tab:AddButton({
+	Name = "Reset",
+	Callback = function()
+      		game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+  	end    
 })
 
 Tab:AddDropdown({
