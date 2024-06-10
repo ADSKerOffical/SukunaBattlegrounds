@@ -715,15 +715,112 @@ end
    end    
 })
 
+local Section =
+    Tab:AddSection(
+    {
+        Name = "Meguna"
+    }
+)
+
+Tab:AddButton({
+ Name = "Throw Mahoraga",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.Mahoraga.Keybind.Fire:FireServer()
+   end    
+})
+
+Tab:AddDropdown({
+	Name = "Elephant",
+	Default = "1",
+	Options = {"Basic Elephant", "The heaviest elephant"},
+	Callback = function(Value)
+		if Value == "Basic Elephant" then
+game:GetService("Players").LocalPlayer.Backpack["Maximum Elephant"].Detect.RemoteEvent:FireServer()
+		end
+		if Value == "The heaviest elephant" then
+		for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Maximum Elephant"].Detect.RemoteEvent:FireServer()
+end
+		end
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Piercing Blood",
+	Default = "1",
+	Options = {"Stabbing Blood", "Bloodthrower"},
+	Callback = function(Value)
+		if Value == "Stabbing Blood" then
+game:GetService("Players").LocalPlayer.Backpack["Piercing Blood"]["Piercing Blood"].Fire:FireServer()
+		end
+		if Value == "Bloodthrower" then
+	for i = 1, 10 do
+wait(0.4)
+game:GetService("Players").LocalPlayer.Backpack["Piercing Blood"]["Piercing Blood"].Fire:FireServer()
+end
+		end
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Cutting Slash: Net",
+	Default = "1",
+	Options = {"Weak wall", "Run away from the wall"},
+	Callback = function(Value)
+		if Value == "Weak wall" then
+game:GetService("Players").LocalPlayer.Backpack["World Cutting Slash: Net"].Punch.Event:FireServer()
+		end
+		if Value == "Run away from the wall" then
+	for i = 1, 5 do
+	game:GetService("Players").LocalPlayer.Backpack["World Cutting Slash: Net"].Punch.Event:FireServer()
+	end
+		end
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Cutting Slash: Vertical",
+	Default = "1",
+	Options = {"Mini punch", "Super punch"},
+	Callback = function(Value)
+		if Value == "Mini punch" then
+game:GetService("Players").LocalPlayer.Backpack["World Cutting Slash: Vertical"].Punch.Event:FireServer()
+		end
+		if Value == "Super punch" then
+for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["World Cutting Slash: Vertical"].Punch.Event:FireServer()
+end
+		end
+	end    
+})
+
+Tab:AddButton({
+ Name = "Deku combo",
+ Callback = function()
+local ohTable1 = {
+ ["Func"] = "DekuCombo"
+}
+
+game:GetService("ReplicatedStorage").CompleteBeserkBeatdownAssets.Deku:FireServer(ohTable1)
+   end    
+})
+
+Tab:AddButton({
+ Name = "MalevolentShrine",
+ Callback = function()
+        game:GetService("ReplicatedStorage").MegunaMalevolentShrineRemote.MalevolentShrine:FireServer()
+   end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Megumi(Created MEGACOCONUT)"
 })
 
 Tab:AddButton({
- Name = "Powerful Beatdown",
+ Name = "Shelling",
  Callback = function()
         for i = 1, 10 do
-game:GetService("Players").LocalPlayer.Backpack["Unlimited Punches"]["Unlimited Hands"].Event:FireServer()
+game:GetService("Players").LocalPlayer.Backpack["Rapidly Consecutive Rabbits"]["Rapidly Consecutive Rabbits"].RemoteEvent:FireServer()
 end
    end    
 })
@@ -732,7 +829,7 @@ Tab:AddButton({
  Name = "Deadly Wolves",
  Callback = function()
         for i = 1, 10 do
-game:GetService("Players").LocalPlayer.Backpack["Divine Dogs"].LocalScript.RemoteEvent:FireServer()
+game:GetService("Players").LocalPlayer.Backpack["Divine Dogs"]["Divine Dogs"].RemoteEvent:FireServer()
 end
    end    
 })
@@ -741,7 +838,7 @@ Tab:AddButton({
  Name = "Democracy blow",
  Callback = function()
         for i = 1, 15 do
-game:GetService("Players").LocalPlayer.Backpack.Nue.LocalScript.RemoteEvent:FireServer()
+game:GetService("Players").LocalPlayer.Backpack.Nue.Detect.RemoteEvent:FireServer()
 end
    end    
 })
@@ -1286,7 +1383,9 @@ Tab:AddDropdown(
             "Young Gojo",
             "Awakened Sukuna",
             "Garou Rampage",
-            "Ichigo"
+            "Ichigo",
+            "Megumi",
+            "Meguna"
         },
         Callback = function(Value)
             if Value == "KJ" then
@@ -1383,6 +1482,20 @@ Tab:AddDropdown(
             if Value == "Ichigo" then
                 local ohString1 = "Character"
                 local ohString2 = "Ichigo"
+                local ohString3 = "Select"
+
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+           if Value == "Megumi" then
+                local ohString1 = "Character"
+                local ohString2 = "Megumi"
+                local ohString3 = "Select"
+
+                game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+            end
+           if Value == "Meguna" then
+                local ohString1 = "Character"
+                local ohString2 = "Meguna"
                 local ohString3 = "Select"
 
                 game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
@@ -1657,6 +1770,29 @@ OrionLib:MakeNotification({
 })
    end    
 })
+
+Tab:AddDropdown(
+    {
+        Name = "Accessories",
+        Default = "",
+        Options = {
+            "Meguna's Wheel",
+            "Doflamingo's Cape",
+            "Doflamingo's Sunglasses",
+            "Heian Arms",
+            "Mahoraga Wheel",
+            "King's Cape",
+            "Sorcerer's Cape"
+        },
+        Callback = function(Value)
+            local ohString1 = "Character"
+            local ohString2 = Value
+            local ohString3 = "Select"
+
+            game:GetService("ReplicatedStorage").Attribute:FireServer(ohString1, ohString2, ohString3)
+        end
+    }
+)
 
 Tab:AddDropdown({
 	Name = "Another Abilities",
